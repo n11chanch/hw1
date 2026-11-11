@@ -13,3 +13,4 @@ dbt_shop:
       dbname: dwh
       schema: analytics
       threads: 4
+      
