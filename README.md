@@ -65,5 +65,3 @@ unique, not_null, relationships, accepted_values, non_negative.
 docker compose run --rm dbt docs generate
 docker compose run --rm --service-ports dbt docs serve --host 0.0.0.0 --port 8080 --no-browser
 ```
-
-<http://localhost:8080>
