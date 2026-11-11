@@ -1,5 +1,5 @@
 select
-    i.order_item_id,
+    {{ dbt_utils.generate_surrogate_key(['i.order_id', 'i.product_id']) }} as order_item_id,
     i.order_id,
     i.product_id,
     o.customer_id,

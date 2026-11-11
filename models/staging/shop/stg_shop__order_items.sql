@@ -4,8 +4,8 @@ with source as (
 )
 
 select
-    -- Ключ позиции из номера заказа и товара.
-    {{ dbt_utils.generate_surrogate_key(['order_id', 'product_id']) }} as order_item_id,
+    -- Своего ключа у позиции нет: склейте order_id и product_id через дефис, например '101-1'.
+    order_id::text || '-' || product_id::text as order_item_id,
     order_id,
     product_id,
     quantity,

@@ -55,7 +55,7 @@ models:
     description: "Позиции заказов: одна строка — один товар в заказе."
     columns:
       - name: order_item_id
-        description: Ключ заказа и товара.
+        description: "Ключ позиции вида 101-1: номер заказа и номер товара через дефис."
         data_tests: [unique, not_null]
       - name: order_id
         description: "Заказ, в который входит позиция."
